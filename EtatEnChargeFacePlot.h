@@ -1,9 +1,9 @@
 #pragma once
-class EnChargeFacePlot
+class EtatEnChargeFacePlot
 {
 public:
-    EnChargeFacePlot();
-    virtual ~EnChargeFacePlot();
+    EtatEnChargeFacePlot();
+    virtual ~EtatEnChargeFacePlot();
 
     void peser();
     void evaluerPlot();

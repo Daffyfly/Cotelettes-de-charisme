@@ -6,6 +6,7 @@
 #include "Position.h"
 #include "Plot.h"
 #include "Objet.h"
+#include "EtatRobot.h"
 using std::string;
 
 class Robot
@@ -16,6 +17,7 @@ private :
     Position& _position;
     Plot* _plot;
     Objet* _objet;
+    EtatRobot& _etat;
 
     public:
         Robot();
@@ -23,7 +25,7 @@ private :
 
         void avancer(int x, int y);
         void tourner(string direction);
-        void saisir(Objet o);
+        void saisir(Objet &o);
         void poser();
         int peser();
         void rencontretPlot(Plot p);
