@@ -2,6 +2,10 @@
 
 
 #include<string>
+
+#include "Position.h"
+#include "Plot.h"
+#include "Objet.h"
 using std::string;
 
 class Robot
