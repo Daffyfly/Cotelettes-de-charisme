@@ -1,4 +1,8 @@
 #pragma once
+
+#include "EtatFige.h"
+#include "EtatEnRoute.h"
+
 class EtatRobot
 {
 public:
@@ -9,11 +13,11 @@ public:
     void tourner();
     void evaluerPlot();
     void poser();
-    EtatRobot saisir() ;
+    EtatRobot* saisir() ;
     void  peser();
-    EtatFige figer();
+    EtatFige* figer();
     void rencontrerPlot();
-    EtatEnRoute repartir();
+    EtatEnRoute* repartir();
 
 };
 

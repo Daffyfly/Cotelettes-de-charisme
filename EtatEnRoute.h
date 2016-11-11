@@ -8,6 +8,6 @@ public:
     EtatEnRoute();
     virtual ~EtatEnRoute();
 
-    EtatFige figer();
+    EtatFige* figer();
 };
 

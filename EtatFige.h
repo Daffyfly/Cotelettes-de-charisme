@@ -6,10 +6,10 @@ class EtatFige :
     EtatEnRoute* _e;
 
 public:
-    EtatFige(EtatEnRoute e);
+    EtatFige(EtatEnRoute* e);
     virtual ~EtatFige();
 
-    EtatEnRoute repartir();
+    EtatEnRoute* repartir();
 
 };
 
