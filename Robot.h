@@ -17,10 +17,10 @@ private :
     Position& _position;
     Plot* _plot;
     Objet* _objet;
-    EtatRobot*  _etat;
+    EtatRobot*  _etat;//Maybe need to put this as a reference
 
     public:
-        Robot();
+        Robot(Position p);
         ~Robot();
 
         void avancer(int x, int y);

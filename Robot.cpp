@@ -1,8 +1,9 @@
 #include "Robot.h"
+#include "EtatAVide.h"
 
-
-Robot::Robot()
+Robot::Robot(Position p) :_etat(new EtatAVide()), _position(p)
 {
+    
 }
 
 
