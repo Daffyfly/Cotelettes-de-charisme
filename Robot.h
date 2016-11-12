@@ -17,7 +17,7 @@ private :
     Position& _position;
     Plot* _plot;
     Objet* _objet;
-    EtatRobot*  _etat;//Maybe need to put this as a reference
+    EtatRobot*  _etat;
 
     public:
         Robot(Position p);

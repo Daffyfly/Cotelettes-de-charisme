@@ -8,7 +8,7 @@ public:
     virtual ~EtatAVideFacePlot();
 
     void evaluerPlot();
-    EtatRobot* saisir();
+    EtatRobot* saisir(); 
     void tourner();
 };
 
