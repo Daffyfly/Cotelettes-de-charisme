@@ -1,12 +1,10 @@
-//
-// Created by vincent on 15/11/16.
-//
+class Robot;
 
 #pragma once
+#include <iostream>
 
-
-class Afficheur {
-private :
+class Afficheur{
+protected :
     Robot & robot;
 public:
     Afficheur(Robot & robot);

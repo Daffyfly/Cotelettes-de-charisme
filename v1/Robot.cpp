@@ -43,9 +43,27 @@ void Robot::repartir()
     try
     {
         _etat = _etat->repartir();
+        notify();
     }
     catch (UnAuthorizedCallException e)
     {
         cerr << e.what() << "\n";
     }
 }//repartir()
+
+void Robot::attach(Afficheur * afficheur)
+{
+    _Afficheurs.push_back(afficheur);
+}
+
+void Robot::notify(){
+    for(Afficheur * afficheur : _Afficheurs)
+    {
+        afficheur->update();
+    }
+}
+
+Position Robot::getPosition()
+{
+    return _position;
+}

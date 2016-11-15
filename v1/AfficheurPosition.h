@@ -1,7 +1,6 @@
-//
-// Created by vincent on 15/11/16.
-//
 #pragma once
+
+#include "Afficheur.h"
 
 class AfficheurPosition : public Afficheur{
 public:

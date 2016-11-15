@@ -1,13 +1,13 @@
-//
-// Created by vincent on 15/11/16.
-//
-
 #include "Afficheur.h"
+#include "Robot.h"
 
-Afficheur::Afficheur(Robot & robot) : robot(robot){}
+Afficheur::Afficheur(Robot & robot) : robot(robot){
+    robot.attach(this);
+}
 
 Afficheur::~Afficheur(){}
 
-void Afficheur::update(){
+void Afficheur::update()
+{
 
 }
