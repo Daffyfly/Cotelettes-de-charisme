@@ -10,5 +10,7 @@ int main(){
     Robot bot(Position(0,0));
     Objet o;
     bot.saisir(o);
+    bot.figer();
+    bot.repartir();
     cout<<"<333"<<endl;
 }

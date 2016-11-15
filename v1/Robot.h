@@ -23,16 +23,10 @@ private :
         Robot(Position p);
         ~Robot();
 
-        virtual void avancer(int x, int y);
-        virtual void tourner(string direction);
-        virtual void saisir(Objet &o);
-        virtual void poser();
-        virtual int peser();
-        virtual void rencontretPlot(Plot p);
-        virtual int evaluerPlot();
-        virtual void figer();
-        virtual void repartir();
-        virtual void afficher();
+        void figer();
+        void repartir();
+        void saisir(Objet &o);
+
 
 };
 
