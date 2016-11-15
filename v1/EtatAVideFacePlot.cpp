@@ -14,12 +14,3 @@ EtatRobot* EtatAVideFacePlot::saisir()
 {
     return new EtatEnChargeFacePlot();
 }
-
-EtatRobot* EtatAVideFacePlot::evaluerPlot()
-{
-
-}
-EtatRobot* EtatAVideFacePlot::tourner()
-{
-
-}

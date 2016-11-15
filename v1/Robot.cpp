@@ -1,6 +1,5 @@
 #include "Robot.h"
 #include "EtatAVide.h"
-#include "UnAuthorizedCallException.h"
 
 Robot::Robot(Position p) :_etat(new EtatAVide()), _position(p)
 {
@@ -19,9 +18,9 @@ void Robot::saisir(Objet &o)
         _etat = _etat->saisir();
         _objet = &o;
     }
-    catch (UnAuthorizedCallException e)
+    catch (...)
     {
-        cerr<<"Exception caught : " <<e.what()<<endl;
+
     }
 }//saisir()
 
@@ -31,9 +30,9 @@ void Robot::figer()
     {
         _etat = _etat->figer();
     }
-    catch (UnAuthorizedCallException e)
+    catch (...)
     {
-        cerr<<"Exception caught : " <<e.what()<<endl;
+
     }
 }//figer()
 

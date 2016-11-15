@@ -6,8 +6,5 @@ class EtatAVide :
 public:
     EtatAVide();
     virtual ~EtatAVide();
-    EtatRobot* avancer();
-    EtatRobot* tourner();
-    EtatRobot* rencontrerPlot();
 };
 

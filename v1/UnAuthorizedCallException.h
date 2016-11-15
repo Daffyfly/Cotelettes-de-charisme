@@ -12,7 +12,6 @@ using namespace std;
 
 class UnAuthorizedCallException :public exception
 {
-public:
     virtual const char* what() const throw()
     {
         return "UnAuthorizedCallException  ! You can't call this function.";

@@ -1,23 +1,19 @@
 #pragma once
-
-#include "EtatFige.h"
-#include "EtatEnRoute.h"
-
 class EtatRobot
 {
 public:
     EtatRobot();
     virtual ~EtatRobot();
 
-    void avancer();
-    void tourner();
-    void evaluerPlot();
-    void poser();
-    EtatRobot* saisir() ;
-    void  peser();
-    EtatFige* figer();
-    void rencontrerPlot();
-    EtatEnRoute* repartir();
+    virtual EtatRobot*avancer();
+    virtual EtatRobot*tourner();
+    virtual EtatRobot*evaluerPlot();
+    virtual EtatRobot*poser();
+    virtual EtatRobot* saisir() ;
+    virtual EtatRobot* peser();
+    virtual EtatRobot* figer();
+    virtual EtatRobot*rencontrerPlot();
+    virtual EtatRobot* repartir();
 
 };
 

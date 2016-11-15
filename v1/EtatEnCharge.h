@@ -6,10 +6,5 @@ class EtatEnCharge :
 public:
     EtatEnCharge();
     virtual ~EtatEnCharge();
-
-    EtatRobot* avancer();
-    EtatRobot* tourner();
-    EtatRobot* peser();
-    EtatRobot* rencontrerPlot();
 };
 
