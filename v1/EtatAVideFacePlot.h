@@ -3,8 +3,12 @@
 class EtatAVideFacePlot :
     public EtatEnRoute
 {
-public:
+private:
+    static EtatAVideFacePlot instance;
+
     EtatAVideFacePlot();
+public:
+    static EtatAVideFacePlot getInstance();
     virtual ~EtatAVideFacePlot();
 
     EtatRobot* saisir();

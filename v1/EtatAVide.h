@@ -3,8 +3,12 @@
 class EtatAVide :
     public EtatEnRoute
 {
-public:
+private:
+    static EtatAVide instance;
+
     EtatAVide();
+public:
+    static EtatAVide getInstance();
     virtual ~EtatAVide();
 };
 

@@ -6,10 +6,14 @@
 class EtatFige :
     public EtatRobot
 {
+private:
     EtatEnRoute* _e;
+    static EtatFige instance;
 
+    EtatFige();
 public:
-    EtatFige(EtatEnRoute* e);
+    static EtatFige getInstance(EtatEnRoute * e);
+    void setEtatEnRoute(EtatEnRoute* e);
     virtual ~EtatFige();
 
     EtatRobot* repartir();

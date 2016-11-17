@@ -1,6 +1,13 @@
 #include "EtatAVideFacePlot.h"
 #include "EtatEnChargeFacePlot.h"
 
+EtatAVideFacePlot EtatAVideFacePlot::instance;
+
+EtatAVideFacePlot EtatAVideFacePlot::getInstance(){
+    return EtatAVideFacePlot::instance;
+}
+
+
 EtatAVideFacePlot::EtatAVideFacePlot()
 {
 }

@@ -3,8 +3,12 @@
 #include "EtatEnRoute.h"
 class EtatEnChargeFacePlot : public EtatEnRoute
 {
-public:
+private:
+    static EtatEnChargeFacePlot instance;
+
     EtatEnChargeFacePlot();
+public:
+    static EtatEnChargeFacePlot getInstance();
     virtual ~EtatEnChargeFacePlot();
 };
 
