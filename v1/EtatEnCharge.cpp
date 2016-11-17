@@ -1,8 +1,8 @@
 #include "EtatEnCharge.h"
 
-EtatEnCharge EtatEnCharge::instance;
+EtatEnCharge* EtatEnCharge::instance = new EtatEnCharge();
 
-EtatEnCharge EtatEnCharge::getInstance(){
+EtatEnCharge* EtatEnCharge::getInstance(){
     return EtatEnCharge::instance;
 }
 

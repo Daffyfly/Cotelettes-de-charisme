@@ -4,11 +4,11 @@ class EtatEnCharge :
     public EtatEnRoute
 {
 private:
-    static EtatEnCharge instance;
+    static EtatEnCharge* instance;
 
     EtatEnCharge();
 public:
-    static EtatEnCharge getInstance();
+    static EtatEnCharge* getInstance();
     virtual ~EtatEnCharge();
 
     std::string getName();

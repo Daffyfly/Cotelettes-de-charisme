@@ -1,7 +1,7 @@
 #include "EtatEnChargeFacePlot.h"
 #include "EtatEnRoute.h"
 
-EtatEnChargeFacePlot* EtatEnChargeFacePlot::instance;
+EtatEnChargeFacePlot* EtatEnChargeFacePlot::instance = new EtatEnChargeFacePlot();
 
 EtatEnChargeFacePlot* EtatEnChargeFacePlot::getInstance(){
     return EtatEnChargeFacePlot::instance;

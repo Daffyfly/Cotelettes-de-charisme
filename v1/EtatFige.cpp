@@ -1,11 +1,11 @@
 #include "EtatFige.h"
 #include "EtatEnRoute.h"
 
-EtatFige* EtatFige::instance;
+EtatFige* EtatFige::instance = new EtatFige();
 
 EtatFige* EtatFige::getInstance(EtatEnRoute* e){
     instance->setEtatEnRoute(e);
-    return EtatFige::instance;
+    return instance;
 }
 
 EtatFige::EtatFige()
@@ -13,7 +13,7 @@ EtatFige::EtatFige()
 }
 
 void EtatFige::setEtatEnRoute(EtatEnRoute* e){
-
+    _e = e;
 }
 
 EtatFige::~EtatFige()
@@ -24,7 +24,6 @@ EtatRobot* EtatFige::repartir()
 {
     return _e;
 }
-//repartir()
 
 std::string EtatFige::getName(){
     return "état figé";

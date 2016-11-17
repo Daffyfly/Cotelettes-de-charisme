@@ -1,10 +1,10 @@
 #pragma once
 class Objet
 {
-    int poids;
+    int _poids;
 
 public:
-    Objet();
+    Objet(int poids);
     ~Objet();
 
     int getPoids() const;

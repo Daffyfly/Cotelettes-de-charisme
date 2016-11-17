@@ -12,7 +12,7 @@ public:
     virtual EtatRobot* figer();
     virtual EtatRobot* repartir();
 
-    virtual std::string getName();
+    virtual std::string getName() = 0;
 
 };
 

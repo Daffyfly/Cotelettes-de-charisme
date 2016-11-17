@@ -2,9 +2,10 @@
 #include "EtatAVide.h"
 #include "UnAuthorizedCallException.h"
 
-Robot::Robot(Position p) :_etat(EtatAVide::getInstance()), _position(p)
+Robot::Robot(Position p, string direction) :_etat(EtatAVide::getInstance()), _position(p), _direction(direction)
 {
-    
+    _plot = nullptr;
+    _objet = nullptr;
 }
 
 
@@ -18,6 +19,7 @@ void Robot::saisir(Objet &o)
     {
         _etat = _etat->saisir();
         _objet = &o;
+        notify();
     }
     catch (UnAuthorizedCallException e)
     {
@@ -30,6 +32,7 @@ void Robot::figer()
     try
     {
         _etat = _etat->figer();
+        notify();
     }
     catch (UnAuthorizedCallException e)
     {
@@ -66,4 +69,20 @@ void Robot::notify(){
 Position Robot::getPosition()
 {
     return _position;
+}
+
+EtatRobot* Robot::getEtat(){
+    return _etat;
+}
+
+string Robot::getDirection(){
+    return _direction;
+}
+
+Objet* Robot::getObjet(){
+    return _objet;
+}
+
+Plot* Robot::getPlot(){
+    return _plot;
 }

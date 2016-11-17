@@ -1,6 +1,6 @@
 #include "EtatAVide.h"
 
-EtatAVide* EtatAVide::instance;
+EtatAVide* EtatAVide::instance = new EtatAVide();
 
 EtatAVide* EtatAVide::getInstance(){
     return EtatAVide::instance;

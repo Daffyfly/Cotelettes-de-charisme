@@ -1,7 +1,7 @@
 #include "EtatAVideFacePlot.h"
 #include "EtatEnChargeFacePlot.h"
 
-EtatAVideFacePlot* EtatAVideFacePlot::instance;
+EtatAVideFacePlot* EtatAVideFacePlot::instance = new EtatAVideFacePlot();
 
 EtatAVideFacePlot* EtatAVideFacePlot::getInstance(){
     return EtatAVideFacePlot::instance;

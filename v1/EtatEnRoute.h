@@ -9,5 +9,5 @@ public:
     EtatEnRoute();
     virtual ~EtatEnRoute();
 
-    EtatRobot * figer();
+    EtatRobot* figer();
 };

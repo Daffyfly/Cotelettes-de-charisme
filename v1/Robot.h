@@ -18,13 +18,13 @@ private :
     string _direction;
 
     vector<Afficheur*> _Afficheurs;
-    Position& _position;
+    Position _position;
     Plot* _plot;
     Objet* _objet;
     EtatRobot*  _etat;
 
     public:
-        Robot(Position p);
+        Robot(Position p, string direction);
         ~Robot();
 
         void figer();
@@ -33,6 +33,10 @@ private :
 
         Position getPosition();
         EtatRobot* getEtat();
+        string getDirection();
+        Objet* getObjet();
+        Plot* getPlot();
+        
 
         //Fonctions Observable
         void attach(Afficheur* afficheur);

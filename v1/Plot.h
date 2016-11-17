@@ -4,7 +4,7 @@ class Plot
     int _hauteur;
 
 public:
-    Plot();
+    Plot(int hauteur);
     ~Plot();
 
     int getHauteur() const;
