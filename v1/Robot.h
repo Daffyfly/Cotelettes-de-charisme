@@ -32,6 +32,7 @@ private :
         void saisir(Objet &o);
 
         Position getPosition();
+        EtatRobot* getEtat();
 
         //Fonctions Observable
         void attach(Afficheur* afficheur);

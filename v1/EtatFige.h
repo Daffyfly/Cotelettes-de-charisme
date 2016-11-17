@@ -8,15 +8,17 @@ class EtatFige :
 {
 private:
     EtatEnRoute* _e;
-    static EtatFige instance;
+    static EtatFige* instance;
 
     EtatFige();
 public:
-    static EtatFige getInstance(EtatEnRoute * e);
+    static EtatFige* getInstance(EtatEnRoute * e);
     void setEtatEnRoute(EtatEnRoute* e);
     virtual ~EtatFige();
 
     EtatRobot* repartir();
+
+    std::string getName();
 
 };
 

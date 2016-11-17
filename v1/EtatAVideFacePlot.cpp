@@ -1,9 +1,9 @@
 #include "EtatAVideFacePlot.h"
 #include "EtatEnChargeFacePlot.h"
 
-EtatAVideFacePlot EtatAVideFacePlot::instance;
+EtatAVideFacePlot* EtatAVideFacePlot::instance;
 
-EtatAVideFacePlot EtatAVideFacePlot::getInstance(){
+EtatAVideFacePlot* EtatAVideFacePlot::getInstance(){
     return EtatAVideFacePlot::instance;
 }
 
@@ -19,5 +19,9 @@ EtatAVideFacePlot::~EtatAVideFacePlot()
 
 EtatRobot* EtatAVideFacePlot::saisir()
 {
-    return new EtatEnChargeFacePlot();
+    return EtatEnChargeFacePlot::getInstance();
+}
+
+std::string EtatAVideFacePlot::getName(){
+    return "état à vide face à un plot";
 }

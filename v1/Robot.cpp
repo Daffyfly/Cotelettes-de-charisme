@@ -2,7 +2,7 @@
 #include "EtatAVide.h"
 #include "UnAuthorizedCallException.h"
 
-Robot::Robot(Position p) :_etat(new EtatAVide()), _position(p)
+Robot::Robot(Position p) :_etat(EtatAVide::getInstance()), _position(p)
 {
     
 }

@@ -1,9 +1,9 @@
 #include "EtatEnCharge.h"
 
-EtatAVide EtatAVide::instance;
+EtatEnCharge EtatEnCharge::instance;
 
-EtatAVide EtatAVide::getInstance(){
-    return EtatAVide::instance;
+EtatEnCharge EtatEnCharge::getInstance(){
+    return EtatEnCharge::instance;
 }
 
 EtatEnCharge::EtatEnCharge()
@@ -13,5 +13,9 @@ EtatEnCharge::EtatEnCharge()
 
 EtatEnCharge::~EtatEnCharge()
 {
+}
+
+std::string EtatEnCharge::getName(){
+    return "état en charge";
 }
 

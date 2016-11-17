@@ -3,8 +3,14 @@
 class EtatEnCharge :
     public EtatEnRoute
 {
-public:
+private:
+    static EtatEnCharge instance;
+
     EtatEnCharge();
+public:
+    static EtatEnCharge getInstance();
     virtual ~EtatEnCharge();
+
+    std::string getName();
 };
 

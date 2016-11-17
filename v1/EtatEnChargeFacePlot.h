@@ -4,12 +4,15 @@
 class EtatEnChargeFacePlot : public EtatEnRoute
 {
 private:
-    static EtatEnChargeFacePlot instance;
+    static EtatEnChargeFacePlot* instance;
 
     EtatEnChargeFacePlot();
 public:
-    static EtatEnChargeFacePlot getInstance();
+        
+    static EtatEnChargeFacePlot* getInstance();
     virtual ~EtatEnChargeFacePlot();
+
+    std::string getName();
 };
 
 
