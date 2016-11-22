@@ -1,3 +1,7 @@
+/*
+@Authors : Vincent Raybaud & Rémy Kaloustian
+*/
+
 #include <iostream>
 #include "Robot.h"
 #include "AfficheurTexte.h"

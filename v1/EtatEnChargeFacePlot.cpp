@@ -1,3 +1,7 @@
+/*
+@Authors : Vincent Raybaud & Rémy Kaloustian
+*/
+
 #include "EtatEnChargeFacePlot.h"
 #include "EtatEnRoute.h"
 

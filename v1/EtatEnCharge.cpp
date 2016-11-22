@@ -1,3 +1,7 @@
+/*
+@Authors : Vincent Raybaud & Rémy Kaloustian
+*/
+
 #include "EtatEnCharge.h"
 
 EtatEnCharge* EtatEnCharge::instance = new EtatEnCharge();

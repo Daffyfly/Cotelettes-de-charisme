@@ -1,3 +1,6 @@
+/*
+@Authors : Vincent Raybaud & Rémy Kaloustian
+*/
 #include <iostream>
 #include <exception>
 

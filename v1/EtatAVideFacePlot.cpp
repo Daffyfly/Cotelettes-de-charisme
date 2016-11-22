@@ -1,3 +1,7 @@
+/*
+@Authors : Vincent Raybaud & Rémy Kaloustian
+*/
+
 #include "EtatAVideFacePlot.h"
 #include "EtatEnChargeFacePlot.h"
 

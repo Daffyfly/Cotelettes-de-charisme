@@ -1,3 +1,7 @@
+/*
+@Authors : Vincent Raybaud & Rémy Kaloustian
+*/
+
 #include "EtatRobot.h"
 #include "UnAuthorizedCallException.h"
 

@@ -1,3 +1,8 @@
+
+/*
+@Authors : Vincent Raybaud & Rémy Kaloustian
+*/
+
 #pragma once
 #include "EtatEnRoute.h"
 class EtatAVideFacePlot :

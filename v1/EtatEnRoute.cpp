@@ -1,3 +1,7 @@
+/*
+@Authors : Vincent Raybaud & Rémy Kaloustian
+*/
+
 #include "EtatEnRoute.h"
 #include "EtatFige.h"
 

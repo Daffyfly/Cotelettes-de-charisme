@@ -1,3 +1,7 @@
+/*
+@Authors : Vincent Raybaud & Rémy Kaloustian
+*/
+
 #include "EtatAVide.h"
 
 EtatAVide* EtatAVide::instance = new EtatAVide();

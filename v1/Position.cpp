@@ -1,3 +1,7 @@
+/*
+@Authors : Vincent Raybaud & Rémy Kaloustian
+*/
+
 #include "Position.h"
 #include "UnAuthorizedCallException.h"
 
