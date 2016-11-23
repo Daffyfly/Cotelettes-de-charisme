@@ -14,7 +14,7 @@ class EtatFige :
 private:
     //Pour conserver l'état du robot avant qu'il se fige.
     //On utilise un pointeur CAAAAARRRRRR
-    EtatEnRoute* _e;
+    EtatEnRoute* _ancien_etat;
     //L'instance du singleton
     static EtatFige* instance;
     //Constructeur privé conformément au design pattern de singleton
@@ -22,8 +22,8 @@ private:
 
 public:
     //Pour pouvoir récupérer l'instance du singleton
-    static EtatFige* getInstance(EtatEnRoute * e);
-    void setEtatEnRoute(EtatEnRoute* e);
+    static EtatFige* getInstance(EtatEnRoute * ancien_etat);
+    void setEtatEnRoute(EtatEnRoute* ancien_etat);
     virtual ~EtatFige();
     EtatRobot* repartir();
     std::string getName();

@@ -7,7 +7,7 @@
 
 Afficheur::Afficheur(Robot & robot) : _robot(robot){
     //On ajoute l'afficheur lui-même au robot passé en paramètre
-    robot.attach(this);
+    robot.attacher(this);
 }
 
 Afficheur::~Afficheur(){}

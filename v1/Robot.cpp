@@ -26,7 +26,7 @@ void Robot::saisir(Objet &o)
     {
         _etat = _etat->saisir();
         _objet = &o;
-        notify();
+        notifier();
     }
     catch (UnAuthorizedCallException e)
     {
@@ -39,7 +39,7 @@ void Robot::figer()
     try
     {
         _etat = _etat->figer();
-        notify();
+        notifier();
     }
     catch (UnAuthorizedCallException e)
     {
@@ -53,7 +53,7 @@ void Robot::repartir()
     try
     {
         _etat = _etat->repartir();
-        notify();
+        notifier();
     }
     catch (UnAuthorizedCallException e)
     {
@@ -62,13 +62,13 @@ void Robot::repartir()
 }//repartir()
 
 //Ajouter un afficheur pour le robot
-void Robot::attach(Afficheur * afficheur)
+void Robot::attacher(Afficheur * afficheur)
 {
     _Afficheurs.push_back(afficheur);
 }
 
 //Mettre à jour les afficheurs
-void Robot::notify(){
+void Robot::notifier(){
     for(Afficheur * afficheur : _Afficheurs)
     {
         //On appelle update() de chaque afficheur attaché

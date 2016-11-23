@@ -8,9 +8,9 @@
 //On instancie l'instance du singleton
 EtatFige* EtatFige::instance = new EtatFige();
 
-EtatFige* EtatFige::getInstance(EtatEnRoute* e){
+EtatFige* EtatFige::getInstance(EtatEnRoute* ancien_etat){
     //On set l'ancien état avec celui qui nous est passé en paramètre. On reviendra sur lui en appelant repartir()
-    instance->setEtatEnRoute(e);
+    instance->setEtatEnRoute(ancien_etat);
     return instance;
 }
 
@@ -19,7 +19,7 @@ EtatFige::EtatFige()
 }
 
 void EtatFige::setEtatEnRoute(EtatEnRoute* e){
-    _e = e;
+    _ancien_etat = e;
 }
 
 EtatFige::~EtatFige()
@@ -28,7 +28,7 @@ EtatFige::~EtatFige()
 
 EtatRobot* EtatFige::repartir()
 {
-    return _e;
+    return _ancien_etat;
 }
 
 std::string EtatFige::getName(){

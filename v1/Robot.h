@@ -44,8 +44,8 @@ private :
         Plot* getPlot();        
 
         //Fonctions pour l'afficheur (Pattern Observateur)
-        void attach(Afficheur* afficheur);
-        void notify();
+        void attacher(Afficheur* afficheur);
+        void notifier();
 
 #pragma endregion
 };
