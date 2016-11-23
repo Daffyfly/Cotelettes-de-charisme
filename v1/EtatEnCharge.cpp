@@ -4,6 +4,7 @@
 
 #include "EtatEnCharge.h"
 
+//On instancie l'instance du singleton
 EtatEnCharge* EtatEnCharge::instance = new EtatEnCharge();
 
 EtatEnCharge* EtatEnCharge::getInstance(){

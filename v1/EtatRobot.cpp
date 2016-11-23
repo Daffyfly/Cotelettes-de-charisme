@@ -13,6 +13,7 @@ EtatRobot::EtatRobot()
 EtatRobot::~EtatRobot()
 {
 }
+//Toutes les méthodes retournent une exception. Ce choix est expliqué plus end étails dans le rapport (partie sur l'état qui est un État)
 
 EtatRobot* EtatRobot::saisir()
 {

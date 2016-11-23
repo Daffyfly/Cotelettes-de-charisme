@@ -19,10 +19,10 @@ AfficheurTexte::~AfficheurTexte()
 
 void AfficheurTexte::update(){
     cout << "Infos Robot:\n";
-    cout << "Etat actuel après action : " << robot.getEtat()->getName() <<".\n";
-    cout << "Position : (" << robot.getPosition().getx() << "," << robot.getPosition().gety() << ")\n";
-    cout << "Direction : " << robot.getDirection() << "\n";
-    Objet* obj = robot.getObjet();
+    cout << "Etat actuel après action : " << _robot.getEtat()->getName() <<".\n";
+    cout << "Position : (" << _robot.getPosition().getx() << "," << _robot.getPosition().gety() << ")\n";
+    cout << "Direction : " << _robot.getDirection() << "\n";
+    Objet* obj = _robot.getObjet();
     cout << "Poids de l'objet : ";
     if (obj!= nullptr){
         cout << obj->getPoids();
@@ -32,7 +32,7 @@ void AfficheurTexte::update(){
     }
     cout << "\n";
     Plot* plot = 
-        robot.getPlot();
+        _robot.getPlot();
     cout << "Hauteur du plot : ";
     if (plot != nullptr){
         cout << plot->getHauteur();

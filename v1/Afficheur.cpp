@@ -5,7 +5,8 @@
 #include "Afficheur.h"
 #include "Robot.h"
 
-Afficheur::Afficheur(Robot & robot) : robot(robot){
+Afficheur::Afficheur(Robot & robot) : _robot(robot){
+    //On ajoute l'afficheur lui-même au robot passé en paramètre
     robot.attach(this);
 }
 

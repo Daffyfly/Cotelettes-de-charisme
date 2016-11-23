@@ -8,6 +8,7 @@
 
 Robot::Robot(Position p, string direction) :_etat(EtatAVide::getInstance()), _position(p), _direction(direction)
 {
+    //Setting pointer attributes to nullptr
     _plot = nullptr;
     _objet = nullptr;
 }
@@ -17,6 +18,8 @@ Robot::~Robot()
 {
 }
 
+
+//Pour les fonctions suivantes, il se peut que l'état du robot ne permette pas d'appeler la méthode, d'où la gestion d'exception
 void Robot::saisir(Objet &o)
 {
     try
@@ -58,18 +61,22 @@ void Robot::repartir()
     }
 }//repartir()
 
+//Ajouter un afficheur pour le robot
 void Robot::attach(Afficheur * afficheur)
 {
     _Afficheurs.push_back(afficheur);
 }
 
+//Mettre à jour les afficheurs
 void Robot::notify(){
     for(Afficheur * afficheur : _Afficheurs)
     {
+        //On appelle update() de chaque afficheur attaché
         afficheur->update();
     }
 }
 
+#pragma region SETTERS_&_GETTERS
 Position Robot::getPosition()
 {
     return _position;
@@ -90,3 +97,4 @@ Objet* Robot::getObjet(){
 Plot* Robot::getPlot(){
     return _plot;
 }
+#pragma endregion

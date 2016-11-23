@@ -5,6 +5,7 @@
 #include "EtatAVideFacePlot.h"
 #include "EtatEnChargeFacePlot.h"
 
+//On instancie l'instance du singleton
 EtatAVideFacePlot* EtatAVideFacePlot::instance = new EtatAVideFacePlot();
 
 EtatAVideFacePlot* EtatAVideFacePlot::getInstance(){
@@ -23,6 +24,7 @@ EtatAVideFacePlot::~EtatAVideFacePlot()
 
 EtatRobot* EtatAVideFacePlot::saisir()
 {
+    //On passe à l'état en charge face plot
     return EtatEnChargeFacePlot::getInstance();
 }
 

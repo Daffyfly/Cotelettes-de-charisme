@@ -4,6 +4,7 @@
 
 #include "EtatAVide.h"
 
+//On instancie l'instance du singleton
 EtatAVide* EtatAVide::instance = new EtatAVide();
 
 EtatAVide* EtatAVide::getInstance(){

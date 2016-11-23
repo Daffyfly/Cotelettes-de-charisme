@@ -5,6 +5,7 @@
 #include "EtatEnChargeFacePlot.h"
 #include "EtatEnRoute.h"
 
+//On instancie l'instance du singleton
 EtatEnChargeFacePlot* EtatEnChargeFacePlot::instance = new EtatEnChargeFacePlot();
 
 EtatEnChargeFacePlot* EtatEnChargeFacePlot::getInstance(){
