@@ -7,6 +7,7 @@
 
 #include "Afficheur.h"
 
+//La classe d'afficheur concret qui affichera les informations du robot
 class AfficheurTexte :
     public Afficheur
 {

@@ -12,7 +12,7 @@ using namespace std;
     UnAuthorizedCallException myex;
     throw myex;
 */
-
+//L'exception renvoyé si on effectue une action infaisable dans un certain état
 class UnAuthorizedCallException :public exception
 {
     public :

@@ -14,18 +14,22 @@
 using std::string;
 using std::vector;
 
+//Classe représentant le robot
 class Robot
 {
 private :
+#pragma region FIELDS
     string _direction;
-
     vector<Afficheur*> _Afficheurs;
     Position _position;
     Plot* _plot;
     Objet* _objet;
     EtatRobot*  _etat;
+#pragma endregion
 
     public:
+#pragma region METHODS
+        //On prend une copie de la position pour que le robot soit respinsable de la durée de vie de sa position
         Robot(Position p, string direction);
         ~Robot();
 
@@ -37,13 +41,12 @@ private :
         EtatRobot* getEtat();
         string getDirection();
         Objet* getObjet();
-        Plot* getPlot();
-        
+        Plot* getPlot();        
 
-        //Fonctions Observable
+        //Fonctions pour l'afficheur (Pattern Observateur)
         void attach(Afficheur* afficheur);
         void notify();
 
-
+#pragma endregion
 };
 

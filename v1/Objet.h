@@ -3,6 +3,8 @@
 */
 
 #pragma once
+
+//Classe représentant un objet saisissable par le robot
 class Objet
 {
     int _poids;

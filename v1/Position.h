@@ -3,11 +3,12 @@
 */
 
 #pragma once
+
+//Classe représentant la position du robot
 class Position
 {
     int _x;
     int _y;
-
 
 public:
     Position(int x, int y);
