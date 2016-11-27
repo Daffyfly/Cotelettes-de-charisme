@@ -1,7 +1,7 @@
 #include "CommandeRobot.h"
 
 
-CommandeRobot::CommandeRobot()
+CommandeRobot::CommandeRobot(Robot& robot) :_robot(&robot)
 {
 }
 
