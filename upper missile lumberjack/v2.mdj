@@ -9427,7 +9427,7 @@
 											"width": 238.08154296875,
 											"height": 13,
 											"autoResize": false,
-											"underline": false,
+											"underline": true,
 											"text": "+nouvelleCommande(string): Commande",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5
@@ -17378,7 +17378,7 @@
 							},
 							"name": "nouvelleCommande",
 							"visibility": "public",
-							"isStatic": false,
+							"isStatic": true,
 							"isLeaf": false,
 							"parameters": [
 								{
