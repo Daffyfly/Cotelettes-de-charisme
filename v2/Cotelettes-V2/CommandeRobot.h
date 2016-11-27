@@ -11,5 +11,8 @@ protected:
 public:
     CommandeRobot(Robot& robot);
     virtual ~CommandeRobot();
+
+    virtual void executer() = 0;
+    virtual void annuler() = 0;
 };
 
