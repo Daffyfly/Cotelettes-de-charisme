@@ -1,7 +1,7 @@
 #include "Invocateur.h"
 
 
-Invocateur::Invocateur(Command& command) :_command(&command)
+Invocateur::Invocateur(Commande& command) :_command(&command)
 {
 }
 

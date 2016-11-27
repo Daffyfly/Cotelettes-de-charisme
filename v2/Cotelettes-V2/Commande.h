@@ -1,9 +1,9 @@
 #pragma once
-class Command
+class Commande
 {
 public:
-    Command();
-    virtual ~Command();
+    Commande();
+    virtual ~Commande();
     virtual void executer() = 0;
     virtual void annuler() = 0;
 };
