@@ -6,6 +6,5 @@ Commande::Commande()
 }
 
 
-Commande::~Commande()
-{
+Commande::~Commande() {
 }

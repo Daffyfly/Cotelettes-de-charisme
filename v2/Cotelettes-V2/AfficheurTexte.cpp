@@ -1,5 +1,5 @@
 /*
-@Authors : Vincent Raybaud & Rémy Kaloustian
+@Authors : Vincent Raybaud & Rï¿½my Kaloustian
 */
 
 #include "AfficheurTexte.h"
@@ -19,26 +19,17 @@ AfficheurTexte::~AfficheurTexte()
 
 void AfficheurTexte::update(){
     cout << "Infos Robot:\n";
-    cout << "Etat actuel après action : " << _robot.getEtat()->getName() <<".\n";
+    cout << "Etat actuel aprï¿½s action : " << _robot.getEtat()->getName() <<".\n";
     cout << "Position : (" << _robot.getPosition().getx() << "," << _robot.getPosition().gety() << ")\n";
     cout << "Direction : " << _robot.getDirection() << "\n";
     Objet* obj = _robot.getObjet();
-    cout << "Poids de l'objet : ";
     if (obj!= nullptr){
-        cout << obj->getPoids();
+
+        cout << "Poids de l'objet : "<< obj->getPoids()<<"\n";
     }
-    else{
-        cout << "pas d'objet tenu";
-    }
-    cout << "\n";
-    Plot* plot = 
-        _robot.getPlot();
-    cout << "Hauteur du plot : ";
+    Plot* plot = _robot.getPlot();
     if (plot != nullptr){
-        cout << plot->getHauteur();
+        cout << "Hauteur du plot : "<< plot->getHauteur()<<"\n";
     }
-    else{
-        cout << "pas de plot en face";
-    }
-    cout << "\n";
+    cout<<"\n";
 }

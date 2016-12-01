@@ -1,5 +1,5 @@
 /*
-@Authors : Vincent Raybaud & Rémy Kaloustian
+@Authors : Vincent Raybaud & Rï¿½my Kaloustian
 */
 
 #include "Position.h"
@@ -7,7 +7,6 @@
 
 Position::Position(int x, int y) : _x(x), _y(y)
 {
-    std::cout << "x = " << _x << " ,, y = " << _y << "\n";
 }
 
 

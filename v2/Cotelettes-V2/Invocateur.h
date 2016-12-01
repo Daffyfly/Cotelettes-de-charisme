@@ -1,12 +1,17 @@
 #pragma once
 
 #include "Commande.h"
+#include "Robot.h"
+#include <string>
+
 class Invocateur
 {
-    Commande * _command;
-
+private:
+    Robot * _robot;
 public:
-    Invocateur(Commande& command); 
+    Invocateur(Robot & robot, std::string file);
     ~Invocateur();
+    int getInt();
+    Robot * getRobot();
 };
 

@@ -1,5 +1,5 @@
 /*
-@Authors : Vincent Raybaud & Rémy Kaloustian
+@Authors : Vincent Raybaud & Rï¿½my Kaloustian
 */
 
 #include <iostream>
@@ -19,6 +19,10 @@ int main() {
 
 
 #pragma region V2
+    Robot bot2(Position(0,0), "Nord");
+    Afficheur * afficheurTexte2 = new AfficheurTexte(bot2);
+    Invocateur(bot2,"txt.txt");
+
 
 #pragma endregion
 }
