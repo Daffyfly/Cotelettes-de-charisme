@@ -10,7 +10,7 @@ class CommandeRobot :
 {
 protected:
     Robot* _robot;
-    virtual Commande* constructeurVirtuel(Invocateur & i);
+    virtual Commande* constructeurVirtuel(Invocateur & i) = 0;
 
 public:
     CommandeRobot(Robot& robot);
