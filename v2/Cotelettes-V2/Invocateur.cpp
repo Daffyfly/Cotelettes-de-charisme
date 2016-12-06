@@ -5,20 +5,13 @@
 
 Invocateur::Invocateur(Robot & robot, std::string file)
 {
-    std::cout << "In Invocateur ctro\n";
     _robot = &robot;
     std::ifstream f(file);
     for( std::string line; std::getline( f, line ); )
     {
-        std::cout << "Reading from file \n";
+        std::cout << "Reading from file : "<<line<<"\n";
         Commande * commande = CommandeRobot::nouvelleCommande(line,*this);
         commande->executer();
-    }
-
-    for (const auto& elem : CommandeRobot::commandesInscrites())
-    {
-        std::cout << elem.first << "  _  ";
-        std::cout << elem.second << " \n";
     }
 }
 

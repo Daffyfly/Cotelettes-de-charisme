@@ -18,8 +18,5 @@ public:
     virtual ~CommandeRobot();
     virtual void executer();
     virtual void annuler();
-
-    static std::map<string, Commande*>& commandesInscrites();
-    static Commande* nouvelleCommande(string, Invocateur&);
 };
 
