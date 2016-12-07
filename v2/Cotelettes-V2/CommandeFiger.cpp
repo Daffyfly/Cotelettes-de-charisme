@@ -12,7 +12,9 @@ CommandeFiger::~CommandeFiger()
 }
 
 Commande* CommandeFiger::constructeurVirtuel(Invocateur & i){
-    return new CommandeFiger(*i.getRobot());
+    Commande * tmp = new CommandeFiger(*i.getRobot());
+    Commande::pileActions.push(tmp);
+    return tmp;
 }
 
 void CommandeFiger::executer()

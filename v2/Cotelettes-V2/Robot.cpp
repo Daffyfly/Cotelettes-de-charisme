@@ -1,5 +1,5 @@
 /*
-@Authors : Vincent Raybaud & Rémy Kaloustian
+@Authors : Vincent Raybaud & Rï¿½my Kaloustian
 */
 
 #include "Robot.h"
@@ -19,7 +19,7 @@ Robot::~Robot()
 }
 
 
-//Pour les fonctions suivantes, il se peut que l'état du robot ne permette pas d'appeler la méthode, d'où la gestion d'exception
+//Pour les fonctions suivantes, il se peut que l'ï¿½tat du robot ne permette pas d'appeler la mï¿½thode, d'oï¿½ la gestion d'exception
 void Robot::saisir(Objet &o)
 {
     try
@@ -33,6 +33,22 @@ void Robot::saisir(Objet &o)
         cerr << e.what()<<"\n";
     }
 }//saisir()
+
+void Robot::avancer(int x, int y)
+{
+    try
+    {
+        _etat=_etat->avancer();
+        _position.setx(x);
+        _position.sety(y);
+        notifier();
+    }
+    catch(UnAuthorizedCallException e)
+    {
+        cerr << e.what() <<"\n";
+    }
+
+}
 
 void Robot::figer()
 {
@@ -67,11 +83,11 @@ void Robot::attacher(Afficheur * afficheur)
     _Afficheurs.push_back(afficheur);
 }
 
-//Mettre à jour les afficheurs
+//Mettre ï¿½ jour les afficheurs
 void Robot::notifier(){
     for(Afficheur * afficheur : _Afficheurs)
     {
-        //On appelle update() de chaque afficheur attaché
+        //On appelle update() de chaque afficheur attachï¿½
         afficheur->update();
     }
 }

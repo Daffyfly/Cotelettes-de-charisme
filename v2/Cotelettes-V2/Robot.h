@@ -1,5 +1,5 @@
 /*
-@Authors : Vincent Raybaud & Rémy Kaloustian
+@Authors : Vincent Raybaud & Rï¿½my Kaloustian
 */
 
 #pragma once
@@ -14,7 +14,7 @@
 using std::string;
 using std::vector;
 
-//Classe représentant le robot
+//Classe reprï¿½sentant le robot
 class Robot
 {
 private :
@@ -29,13 +29,14 @@ private :
 
     public:
 #pragma region METHODS
-        //On prend une copie de la position pour que le robot soit respinsable de la durée de vie de sa position
+        //On prend une copie de la position pour que le robot soit respinsable de la durï¿½e de vie de sa position
         Robot(Position p, string direction);
         ~Robot();
 
         void figer();
         void repartir();
         void saisir(Objet &o);
+        void avancer(int x, int y);
 
         Position getPosition();
         EtatRobot* getEtat();

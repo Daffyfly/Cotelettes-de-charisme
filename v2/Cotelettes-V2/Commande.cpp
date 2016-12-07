@@ -6,6 +6,9 @@ std::map<std::string, Commande*>& Commande::commandesInscrites(){
     return *comInscrites;
 }
 
+
+std::stack<Commande*> Commande::pileActions;
+
 Commande::Commande(){
 
 }
@@ -22,3 +25,4 @@ Commande* Commande::nouvelleCommande(std::string nouvelle_commande, Invocateur &
 {
     return commandesInscrites()[nouvelle_commande]->constructeurVirtuel(i);
 }
+

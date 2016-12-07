@@ -1,5 +1,5 @@
 /*
-@Authors : Vincent Raybaud & Rémy Kaloustian
+@Authors : Vincent Raybaud & Rï¿½my Kaloustian
 */
 
 #include "EtatRobot.h"
@@ -13,7 +13,7 @@ EtatRobot::EtatRobot()
 EtatRobot::~EtatRobot()
 {
 }
-//Toutes les méthodes retournent une exception. Ce choix est expliqué plus end étails dans le rapport (partie sur l'état qui est un État)
+//Toutes les mï¿½thodes retournent une exception. Ce choix est expliquï¿½ plus end ï¿½tails dans le rapport (partie sur l'ï¿½tat qui est un ï¿½tat)
 
 EtatRobot* EtatRobot::saisir()
 {
@@ -28,6 +28,12 @@ EtatRobot* EtatRobot::figer()
 }
 
 EtatRobot* EtatRobot::repartir()
+{
+    UnAuthorizedCallException myex;
+    throw myex;
+}
+
+EtatRobot* EtatRobot::avancer()
 {
     UnAuthorizedCallException myex;
     throw myex;

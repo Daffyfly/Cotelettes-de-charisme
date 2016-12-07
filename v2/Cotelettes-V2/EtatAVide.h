@@ -1,22 +1,24 @@
 
 /*
-@Authors : Vincent Raybaud & Rémy Kaloustian
+@Authors : Vincent Raybaud & Rï¿½my Kaloustian
 */
 #pragma once
 #include "EtatEnRoute.h"
 
-//Classe corespondant à l'état à vide du robot
+//Classe corespondant ï¿½ l'ï¿½tat ï¿½ vide du robot
 class EtatAVide :
     public EtatEnRoute
 {
 private:
     //L'instance du singleton
     static EtatAVide* instance;
-    //Constructeur privé conformément au design pattern de singleton
+    //Constructeur privï¿½ conformï¿½ment au design pattern de singleton
     EtatAVide();
 
 public:    
-    //Pour pouvoir récupérer l'instance du singleton
+    //Pour pouvoir rï¿½cupï¿½rer l'instance du singleton
+    EtatRobot* avancer();
+
     static EtatAVide* getInstance();
     virtual ~EtatAVide();
     std::string getName();

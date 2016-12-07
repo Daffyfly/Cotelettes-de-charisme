@@ -12,7 +12,9 @@ CommandeRepartir::~CommandeRepartir()
 }
 
 Commande* CommandeRepartir::constructeurVirtuel(Invocateur & i){
-    return new CommandeRepartir(*i.getRobot());
+    Commande * tmp = new CommandeRepartir(*i.getRobot());
+    Commande::pileActions.push(tmp);
+    return tmp;
 }
 
 void CommandeRobot::executer(){}

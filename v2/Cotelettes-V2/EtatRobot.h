@@ -1,25 +1,26 @@
 /*
-@Authors : Vincent Raybaud & Rémy Kaloustian
+@Authors : Vincent Raybaud & Rï¿½my Kaloustian
 */
 
 #pragma once
 
 #include <string>
 
-//Classe de base pour un état de robot, qui sera hérité dans tous les autres états
-//Abstraite car on ne sait pas ce que fait un état de base
+//Classe de base pour un ï¿½tat de robot, qui sera hï¿½ritï¿½ dans tous les autres ï¿½tats
+//Abstraite car on ne sait pas ce que fait un ï¿½tat de base
 class EtatRobot
 {
 public:
     EtatRobot();
     virtual ~EtatRobot();
     
-    //Seules les méthodes demandées dans l'énoncé ont été implémentées
+    //Seules les mï¿½thodes demandï¿½es dans l'ï¿½noncï¿½ ont ï¿½tï¿½ implï¿½mentï¿½es
     virtual EtatRobot* saisir();
     virtual EtatRobot* figer() ;
     virtual EtatRobot* repartir() ;
+    virtual EtatRobot* avancer();
 
-    //Caractéristique du côté abstrait de la classe
+    //Caractï¿½ristique du cï¿½tï¿½ abstrait de la classe
     virtual std::string getName() = 0;
 
 };

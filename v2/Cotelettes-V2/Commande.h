@@ -3,6 +3,7 @@
 class Invocateur;
 #include <string>
 #include <map>
+#include <stack>
 
 class Commande
 {
@@ -14,6 +15,7 @@ public:
     virtual void annuler() = 0;
     virtual Commande* constructeurVirtuel(Invocateur&)=0;
 
+    static std::stack<Commande*> pileActions;
     static std::map<std::string, Commande*>& commandesInscrites();
     static Commande* nouvelleCommande(std::string, Invocateur&);
 };

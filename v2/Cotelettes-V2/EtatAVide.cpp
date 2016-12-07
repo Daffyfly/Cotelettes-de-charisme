@@ -1,5 +1,5 @@
 /*
-@Authors : Vincent Raybaud & Rémy Kaloustian
+@Authors : Vincent Raybaud & Rï¿½my Kaloustian
 */
 
 #include "EtatAVide.h"
@@ -21,5 +21,9 @@ EtatAVide::~EtatAVide()
 }
 
 std::string EtatAVide::getName(){
-    return "état à vide";
+    return "ï¿½tat ï¿½ vide";
+}
+
+EtatRobot* EtatAVide::avancer(){
+    return this;
 }
