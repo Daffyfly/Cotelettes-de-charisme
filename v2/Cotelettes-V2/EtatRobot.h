@@ -19,6 +19,11 @@ public:
     virtual EtatRobot* figer() ;
     virtual EtatRobot* repartir() ;
     virtual EtatRobot* avancer();
+    virtual EtatRobot* rencontrerPlot();
+    virtual EtatRobot* evaluerPlot();
+    virtual EtatRobot* peser();
+    virtual EtatRobot* poser();
+    virtual EtatRobot* tourner(std::string lastdirection, std::string nextdirection);
 
     //Caract�ristique du c�t� abstrait de la classe
     virtual std::string getName() = 0;

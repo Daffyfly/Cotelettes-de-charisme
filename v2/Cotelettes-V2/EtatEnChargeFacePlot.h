@@ -1,25 +1,30 @@
 /*
-@Authors : Vincent Raybaud & Rémy Kaloustian
+@Authors : Vincent Raybaud & Rï¿½my Kaloustian
 */
 
 #pragma once
 
 #include "EtatEnRoute.h"
 
-//Classe correspondant à l'état en charge face plot du robot
+//Classe correspondant ï¿½ l'ï¿½tat en charge face plot du robot
 class EtatEnChargeFacePlot : public EtatEnRoute
 {
 private:
     //L'instance du singleton
     static EtatEnChargeFacePlot* instance;
-    //Constructeur privé conformément au design pattern de singleton
+    //Constructeur privï¿½ conformï¿½ment au design pattern de singleton
     EtatEnChargeFacePlot();
 
 public:        
-    //Pour pouvoir récupérer l'instance du singleton
+    //Pour pouvoir rï¿½cupï¿½rer l'instance du singleton
     static EtatEnChargeFacePlot* getInstance();
     virtual ~EtatEnChargeFacePlot();
     std::string getName();
+
+    EtatRobot* tourner(std::string lastdirection, std::string nextdirection);
+    EtatRobot* peser();
+    EtatRobot* poser();
+    EtatRobot* evaluerPlot();
 };
 
 

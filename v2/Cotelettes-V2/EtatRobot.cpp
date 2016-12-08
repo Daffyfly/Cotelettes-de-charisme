@@ -38,3 +38,32 @@ EtatRobot* EtatRobot::avancer()
     UnAuthorizedCallException myex;
     throw myex;
 }
+
+EtatRobot* EtatRobot::rencontrerPlot()
+{
+    UnAuthorizedCallException myex;
+    throw myex;
+}
+
+EtatRobot* EtatRobot::peser()
+{
+    UnAuthorizedCallException myex;
+    throw myex;
+}
+
+EtatRobot* EtatRobot::poser()
+{
+    UnAuthorizedCallException myex;
+    throw myex;
+}
+EtatRobot* EtatRobot::evaluerPlot(){
+    UnAuthorizedCallException myex;
+    throw myex;
+}
+
+
+EtatRobot* EtatRobot::tourner(string lastdirection, string nextdirection)
+{
+    UnAuthorizedCallException myex;
+    throw myex;
+}

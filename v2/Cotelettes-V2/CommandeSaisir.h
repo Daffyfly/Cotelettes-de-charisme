@@ -4,13 +4,13 @@
 class CommandeSaisir :
     public CommandeRobot
 {
+    int poids;
 protected:
     virtual Commande* constructeurVirtuel(Invocateur & i);
-
 public:
     static CommandeSaisir maCommande;
 
-    CommandeSaisir(Robot&);
+    CommandeSaisir(Robot&, int);
     CommandeSaisir(std::string name) : CommandeRobot(name){}
     virtual ~CommandeSaisir();
     virtual void executer();

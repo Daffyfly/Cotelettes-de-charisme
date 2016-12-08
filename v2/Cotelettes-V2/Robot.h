@@ -35,14 +35,20 @@ private :
 
         void figer();
         void repartir();
-        void saisir(Objet &o);
+        void saisir(Objet *o);
         void avancer(int x, int y);
+        void rencontrerPlot(Plot *p);
+        void tourner(string direction);
+        void peser();
+        void poser();
+        void evaluerPlot();
 
         Position getPosition();
         EtatRobot* getEtat();
         string getDirection();
         Objet* getObjet();
-        Plot* getPlot();        
+        Plot* getPlot();
+        void setPlot(Plot * p);
 
         //Fonctions pour l'afficheur (Pattern Observateur)
         void attacher(Afficheur* afficheur);

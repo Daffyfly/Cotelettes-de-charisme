@@ -1,11 +1,10 @@
 #include "CommandeTourner.h"
 #include "Invocateur.h"
 
-CommandeTourner CommandeTourner::maCommande((std::string)"tourner");
+CommandeTourner CommandeTourner::maCommande((std::string)"TOURNER");
 
 CommandeTourner::CommandeTourner(Robot& robot, string direction) :CommandeRobot(robot) , _direction(direction)
 {
-    _lastdirection = _robot->getDirection();
 }
 
 
@@ -21,10 +20,12 @@ Commande* CommandeTourner::constructeurVirtuel(Invocateur & i){
 
 void CommandeTourner::executer()
 {
-
+    _lastdirection=_robot->getDirection();
+    _robot->tourner(_direction);
 }
 
 
 void CommandeTourner::annuler()
 {
+    _robot->tourner(_lastdirection);
 }

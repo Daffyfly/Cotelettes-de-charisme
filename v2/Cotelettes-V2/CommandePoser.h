@@ -9,6 +9,7 @@ protected:
 
 public:
     static CommandePoser maCommande;
+    int poids;
 
     CommandePoser(Robot& );
     CommandePoser(std::string name): CommandeRobot(name){}

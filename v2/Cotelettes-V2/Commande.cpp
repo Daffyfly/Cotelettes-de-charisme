@@ -6,11 +6,10 @@ std::map<std::string, Commande*>& Commande::commandesInscrites(){
     return *comInscrites;
 }
 
-
 std::stack<Commande*> Commande::pileActions;
 
-Commande::Commande(){
-
+Commande::Commande()
+{
 }
 
 Commande::Commande(std::string name){
@@ -18,7 +17,8 @@ Commande::Commande(std::string name){
 }
 
 
-Commande::~Commande() {
+Commande::~Commande()
+{
 }
 
 Commande* Commande::nouvelleCommande(std::string nouvelle_commande, Invocateur & i)

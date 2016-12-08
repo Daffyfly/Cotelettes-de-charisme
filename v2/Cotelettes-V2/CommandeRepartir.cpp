@@ -1,6 +1,6 @@
 #include "CommandeRepartir.h"
 
-CommandeRepartir CommandeRepartir::maCommande((std::string)"repartir");
+CommandeRepartir CommandeRepartir::maCommande((std::string)"REPARTIR");
 
 CommandeRepartir::CommandeRepartir(Robot& robot ) :CommandeRobot(robot)
 {

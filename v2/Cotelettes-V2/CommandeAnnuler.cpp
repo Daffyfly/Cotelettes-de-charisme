@@ -4,10 +4,10 @@
 
 #include "CommandeAnnuler.h"
 
-CommandeAnnuler CommandeAnnuler::maCommande((std::string)"annuler");
+CommandeAnnuler CommandeAnnuler::maCommande((std::string)"ANNULER");
 
-CommandeAnnuler::CommandeAnnuler(Robot& robot) :CommandeRobot(robot)
-{
+CommandeAnnuler::CommandeAnnuler(){
+
 }
 
 CommandeAnnuler::~CommandeAnnuler()
@@ -15,7 +15,7 @@ CommandeAnnuler::~CommandeAnnuler()
 }
 
 Commande* CommandeAnnuler::constructeurVirtuel(Invocateur & i){
-    return new CommandeAnnuler(*i.getRobot());
+    return new CommandeAnnuler();
 }
 
 void CommandeAnnuler::executer()
@@ -25,4 +25,8 @@ void CommandeAnnuler::executer()
         Commande::pileActions.top()->annuler();
         Commande::pileActions.pop();
     }
+}
+
+void CommandeAnnuler::annuler(){
+
 }

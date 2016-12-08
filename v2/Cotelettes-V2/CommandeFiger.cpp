@@ -1,6 +1,6 @@
 #include "CommandeFiger.h"
 
-CommandeFiger CommandeFiger::maCommande((std::string)"figer");
+CommandeFiger CommandeFiger::maCommande((std::string)"FIGER");
 
 CommandeFiger::CommandeFiger(Robot& robot) :CommandeRobot(robot)
 {

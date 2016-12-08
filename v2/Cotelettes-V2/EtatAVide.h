@@ -18,6 +18,7 @@ private:
 public:    
     //Pour pouvoir r�cup�rer l'instance du singleton
     EtatRobot* avancer();
+    EtatRobot* rencontrerPlot();
 
     static EtatAVide* getInstance();
     virtual ~EtatAVide();

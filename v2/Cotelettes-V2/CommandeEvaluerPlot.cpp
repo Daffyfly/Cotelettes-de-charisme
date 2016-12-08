@@ -1,6 +1,6 @@
 #include "CommandeEvaluerPlot.h"
 
-CommandeEvaluerPlot CommandeEvaluerPlot::maCommande((std::string)"evaluerplot");
+CommandeEvaluerPlot CommandeEvaluerPlot::maCommande((std::string)"EVALUERPLOT");
 
 CommandeEvaluerPlot::CommandeEvaluerPlot(Robot& robot) :CommandeRobot(robot)
 {
@@ -17,10 +17,5 @@ Commande* CommandeEvaluerPlot::constructeurVirtuel(Invocateur & i){
 
 void CommandeEvaluerPlot::executer()
 {
-
-}
-
-void CommandeEvaluerPlot::annuler()
-{
-
+    _robot->evaluerPlot();
 }

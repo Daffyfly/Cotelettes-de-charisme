@@ -3,6 +3,7 @@
 */
 
 #include "EtatAVide.h"
+#include "EtatAVideFacePlot.h"
 
 //On instancie l'instance du singleton
 EtatAVide* EtatAVide::instance = new EtatAVide();
@@ -26,4 +27,8 @@ std::string EtatAVide::getName(){
 
 EtatRobot* EtatAVide::avancer(){
     return this;
+}
+
+EtatRobot* EtatAVide::rencontrerPlot(){
+    return EtatAVideFacePlot::getInstance();
 }

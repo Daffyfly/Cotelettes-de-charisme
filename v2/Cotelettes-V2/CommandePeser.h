@@ -13,6 +13,5 @@ public:
     CommandePeser(std::string name): CommandeRobot(name){}
     virtual ~CommandePeser();
     virtual void executer();
-    virtual void annuler();
 };
 

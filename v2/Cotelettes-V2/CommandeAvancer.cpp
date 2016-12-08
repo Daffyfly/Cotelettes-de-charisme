@@ -1,6 +1,6 @@
 #include "CommandeAvancer.h"
 
-CommandeAvancer CommandeAvancer::maCommande((std::string)"avancer");
+CommandeAvancer CommandeAvancer::maCommande((std::string)"AVANCER");
 
 CommandeAvancer::CommandeAvancer(Robot& robot, int a, int b) :CommandeRobot(robot), x(a), y(b)
 {

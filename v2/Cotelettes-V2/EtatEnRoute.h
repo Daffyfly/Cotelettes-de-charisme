@@ -1,19 +1,20 @@
 /*
-@Authors : Vincent Raybaud & Rémy Kaloustian
+@Authors : Vincent Raybaud & Rï¿½my Kaloustian
 */
 
 #pragma once
 
 #include "EtatRobot.h"
 
-//Classe nécessaire pour le polymorphisme. C'est la classe mère des états qui ne sont pas l'état figé,
-//conformément au diagramme d'états transitions
+//Classe nï¿½cessaire pour le polymorphisme. C'est la classe mï¿½re des ï¿½tats qui ne sont pas l'ï¿½tat figï¿½,
+//conformï¿½ment au diagramme d'ï¿½tats transitions
 class EtatEnRoute :
     public EtatRobot
 {
 public:
     EtatEnRoute();
     virtual ~EtatEnRoute();
-    //Tous les états fils peuvent exécuter figer()
+    //Tous les ï¿½tats fils peuvent exï¿½cuter figer()
     EtatRobot* figer();
+    EtatRobot* tourner(std::string,std::string);
 };

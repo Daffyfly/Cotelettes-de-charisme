@@ -9,7 +9,7 @@
 //CommandeROBOT???? Demander à la prof
 
 class CommandeAnnuler :
-    public CommandeRobot
+    public Commande
 {
     protected:
         virtual Commande* constructeurVirtuel(Invocateur & i);
@@ -17,8 +17,9 @@ class CommandeAnnuler :
     public:
         static CommandeAnnuler maCommande;
 
-        CommandeAnnuler(Robot&);
-        CommandeAnnuler(std::string name): CommandeRobot(name){}
+        CommandeAnnuler();
+        CommandeAnnuler(std::string name): Commande(name){}
         virtual ~CommandeAnnuler();
-        virtual void executer();
+        void executer();
+        void annuler();
 };

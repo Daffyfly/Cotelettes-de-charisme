@@ -1,26 +1,29 @@
 
 /*
-@Authors : Vincent Raybaud & Rémy Kaloustian
+@Authors : Vincent Raybaud & Rï¿½my Kaloustian
 */
 
 #pragma once
 #include "EtatEnRoute.h"
 
-//Classe correspondant à l'état à vide face plot du robot
+//Classe correspondant ï¿½ l'ï¿½tat ï¿½ vide face plot du robot
 class EtatAVideFacePlot :
     public EtatEnRoute
 {
 private:
     //L'instance du singleton
     static EtatAVideFacePlot* instance;
-    //Constructeur privé conformément au design pattern de singleton
+    //Constructeur privï¿½ conformï¿½ment au design pattern de singleton
     EtatAVideFacePlot();
 
 public:
-    //Pour pouvoir récupérer l'instance du singleton
+    //Pour pouvoir rï¿½cupï¿½rer l'instance du singleton
     static EtatAVideFacePlot* getInstance();
     virtual ~EtatAVideFacePlot();
     EtatRobot* saisir();
     std::string getName();
+
+    EtatRobot* tourner(std::string lastdirection, std::string nextdirection);
+    EtatRobot* evaluerPlot();
 };
 

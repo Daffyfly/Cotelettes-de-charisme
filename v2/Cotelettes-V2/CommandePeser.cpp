@@ -1,6 +1,6 @@
 #include "CommandePeser.h"
 
-CommandePeser CommandePeser::maCommande((std::string)"peser");
+CommandePeser CommandePeser::maCommande((std::string)"PESER");
 
 CommandePeser::CommandePeser(Robot& robot) :CommandeRobot(robot)
 {
@@ -17,10 +17,5 @@ Commande* CommandePeser::constructeurVirtuel(Invocateur & i){
 
 void CommandePeser::executer()
 {
-
-}
-
-void CommandePeser::annuler()
-{
-
+    _robot->peser();
 }

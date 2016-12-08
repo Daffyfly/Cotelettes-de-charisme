@@ -10,7 +10,7 @@ Invocateur::Invocateur(Robot & robot, std::string file)
     for( std::string action; f>>action;)
     {
         std::cout << "Reading from file : "<<action<<"\n";
-        Commande * commande = CommandeRobot::nouvelleCommande(action,*this);
+        Commande * commande = Commande::nouvelleCommande(action,*this);
         commande->executer();
     }
 }

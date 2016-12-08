@@ -1,9 +1,11 @@
 /*
-@Authors : Vincent Raybaud & Rémy Kaloustian
+@Authors : Vincent Raybaud & Rï¿½my Kaloustian
 */
 
 #include "EtatAVideFacePlot.h"
 #include "EtatEnChargeFacePlot.h"
+#include "EtatAVide.h"
+#include "UnAuthorizedCallException.h"
 
 //On instancie l'instance du singleton
 EtatAVideFacePlot* EtatAVideFacePlot::instance = new EtatAVideFacePlot();
@@ -24,10 +26,22 @@ EtatAVideFacePlot::~EtatAVideFacePlot()
 
 EtatRobot* EtatAVideFacePlot::saisir()
 {
-    //On passe à l'état en charge face plot
+    //On passe ï¿½ l'ï¿½tat en charge face plot
     return EtatEnChargeFacePlot::getInstance();
 }
 
+EtatRobot* EtatAVideFacePlot::tourner(std::string lastdirection, std::string nextdirection){
+    if(lastdirection != nextdirection){
+        return EtatAVide::getInstance();
+    }
+    return this;
+}
+
+EtatRobot* EtatAVideFacePlot::evaluerPlot(){
+    return this;
+}
+
+
 std::string EtatAVideFacePlot::getName(){
-    return "état à vide face à un plot";
+    return "ï¿½tat ï¿½ vide face ï¿½ un plot";
 }

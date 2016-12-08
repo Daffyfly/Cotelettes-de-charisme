@@ -1,5 +1,5 @@
 /*
-@Authors : Vincent Raybaud & Rémy Kaloustian
+@Authors : Vincent Raybaud & Rï¿½my Kaloustian
 */
 
 #include "EtatEnRoute.h"
@@ -17,7 +17,11 @@ EtatEnRoute::~EtatEnRoute()
 
 EtatRobot* EtatEnRoute::figer()
 {
-    //Tous les états en route pevent appeler figer()
-    //On retourne un état figé, en lui passant l'état courant (nécessaire pour pouvoir revenir à l'ancien état depuis repartir())
+    //Tous les ï¿½tats en route pevent appeler figer()
+    //On retourne un ï¿½tat figï¿½, en lui passant l'ï¿½tat courant (nï¿½cessaire pour pouvoir revenir ï¿½ l'ancien ï¿½tat depuis repartir())
     return EtatFige::getInstance(this);
+}
+
+EtatRobot* EtatEnRoute::tourner(std::string lastdirection, std::string nextdirection){
+    return this;
 }

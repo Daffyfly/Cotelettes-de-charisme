@@ -4,13 +4,14 @@
 class CommandeRencontrerPlot :
     public CommandeRobot
 {
+    int taille;
 protected:
     virtual Commande* constructeurVirtuel(Invocateur & i);
 
 public:
     static CommandeRencontrerPlot maCommande;
 
-    CommandeRencontrerPlot(Robot& );
+    CommandeRencontrerPlot(Robot&, int);
     CommandeRencontrerPlot(std::string name): CommandeRobot(name){}
     virtual ~CommandeRencontrerPlot();
     virtual void executer();

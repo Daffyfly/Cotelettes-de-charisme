@@ -13,6 +13,5 @@ public:
     CommandeEvaluerPlot(std::string name): CommandeRobot(name){}
     virtual ~CommandeEvaluerPlot();
     virtual void executer();
-    virtual void annuler();
 };
 
