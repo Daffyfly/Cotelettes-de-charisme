@@ -6,8 +6,8 @@
 Invocateur::Invocateur(Robot & robot, std::string file)
 {
     _robot = &robot;
-    f.open(file);
-    for( std::string action; f>>action;)
+    _f.open(file);
+    for( std::string action; _f>>action;)
     {
         std::cout << "Reading from file : "<<action<<"\n";
         Commande * commande = Commande::nouvelleCommande(action,*this);
@@ -17,13 +17,13 @@ Invocateur::Invocateur(Robot & robot, std::string file)
 
 int Invocateur::getInt(){
     int a;
-    f>>a;
+    _f>>a;
     return a;
 }
 
 std::string Invocateur::getString(){
     std::string a;
-    f>>a;
+   _f>>a;
     return a;
 }
 

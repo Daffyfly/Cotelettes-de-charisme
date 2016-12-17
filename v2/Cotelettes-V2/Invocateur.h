@@ -8,7 +8,7 @@
 class Invocateur
 {
 private:
-    std::ifstream f;
+    std::ifstream _f;
     Robot * _robot;
 public:
     Invocateur(Robot & robot, std::string file);
